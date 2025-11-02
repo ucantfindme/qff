@@ -57,11 +57,24 @@ function checkChallengeAvailability() {
     const leaderboardSection = document.getElementById('leaderboard-section');
     const submissionSection = document.getElementById('challenge-submission');
     
+    // Check if elements exist before trying to modify them
+    if (!countdownSection || !leaderboardSection) {
+        console.warn('Required elements not found in DOM');
+        // If countdown doesn't exist, just load leaderboard
+        if (leaderboardSection) {
+            leaderboardSection.style.display = 'block';
+            loadLeaderboard();
+        }
+        return;
+    }
+    
     if (now < CONTEST_START_TIME) {
         // Contest hasn't started yet - show countdown, hide leaderboard and submission
         countdownSection.style.display = 'block';
         leaderboardSection.style.display = 'none';
-        submissionSection.style.display = 'none';
+        if (submissionSection) {
+            submissionSection.style.display = 'none';
+        }
         
         // Start countdown timer
         startCountdownTimer();
@@ -69,7 +82,9 @@ function checkChallengeAvailability() {
         // Contest has started - show leaderboard and submission, hide countdown
         countdownSection.style.display = 'none';
         leaderboardSection.style.display = 'block';
-        submissionSection.style.display = 'block';
+        if (submissionSection) {
+            submissionSection.style.display = 'block';
+        }
         
         // Load leaderboard
         loadLeaderboard();

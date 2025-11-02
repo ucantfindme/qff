@@ -1680,6 +1680,75 @@ img {
     box-shadow: 0 6px 12px rgba(255, 210, 63, 0.3);
 }
 
+/* Notebooks Container - Compact Grid Layout */
+.notebooks-container {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 210, 63, 0.2);
+}
+
+.notebooks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.notebook-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.notebook-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 210, 63, 0.5);
+    box-shadow: 0 8px 20px rgba(255, 210, 63, 0.2);
+}
+
+.solution-card {
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.solution-card:hover {
+    border-color: rgba(0, 255, 136, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+}
+
+.notebook-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.notebook-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-accent-1);
+    margin-bottom: 1rem;
+}
+
+.colab-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.colab-link:hover {
+    transform: scale(1.05);
+}
+
+.colab-link img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Old banner styles - keeping for backward compatibility */
 .banner-icon {
     font-size: 3rem;
     flex-shrink: 0;
@@ -2390,6 +2459,27 @@ img {
 
 /* Responsive Design for Challenge Page */
 @media (max-width: 768px) {
+    .notebooks-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .notebooks-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .notebook-card {
+        padding: 1rem;
+    }
+    
+    .notebook-icon {
+        font-size: 2rem;
+    }
+    
+    .notebook-card h3 {
+        font-size: 1rem;
+    }
+    
     .challenge-hero .hero-content h1 {
         font-size: 2.2rem;
     }
@@ -2427,6 +2517,23 @@ img {
     
     .banner-icon {
         font-size: 2.5rem;
+    }
+    
+    .notebooks-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .notebook-card {
+        padding: 0.8rem;
+    }
+    
+    .notebook-icon {
+        font-size: 1.8rem;
+    }
+    
+    .notebook-card h3 {
+        font-size: 0.95rem;
     }
     
     .banner-content h3 {
