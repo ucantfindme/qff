@@ -3,7 +3,50 @@ document.addEventListener('DOMContentLoaded', function() {
     checkChallengeAvailability();
     setupFormSubmission();
     setupFileUpload();
+    
+    // Add confetti animation for winners
+    setTimeout(() => {
+        createConfetti();
+    }, 500);
 });
+
+// Confetti animation function
+function createConfetti() {
+    const winnersSection = document.querySelector('.winners-announcement');
+    if (!winnersSection) return;
+    
+    const colors = ['#ffd23f', '#ff3d81', '#8a2be2', '#00ff88', '#ff6b6b'];
+    const confettiCount = 50;
+    
+    for (let i = 0; i < confettiCount; i++) {
+        setTimeout(() => {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            confetti.style.animation = `confetti-fall ${Math.random() * 3 + 2}s linear infinite`;
+            
+            // Randomize confetti shapes
+            if (Math.random() > 0.5) {
+                confetti.style.borderRadius = '50%';
+            }
+            
+            winnersSection.appendChild(confetti);
+            
+            // Remove confetti after animation
+            setTimeout(() => {
+                if (confetti.parentNode) {
+                    confetti.parentNode.removeChild(confetti);
+                }
+            }, 5000);
+        }, i * 100);
+    }
+    
+    // Repeat confetti every 10 seconds
+    setTimeout(createConfetti, 10000);
+}
 
 // Contest start time: October 28, 2025 at 6:00 PM
 const CONTEST_START_TIME = new Date('2025-10-28T18:00:00').getTime();
