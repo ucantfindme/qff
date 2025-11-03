@@ -102,6 +102,18 @@ img {
     margin: 0 auto;
 }
 
+.hero-caption {
+    font-family: var(--font-heading);
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent-1);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .hero h1 {
     font-family: var(--font-heading);
     font-size: clamp(28px, 5vw, 48px); /* Responsive font size */
@@ -138,6 +150,66 @@ img {
     letter-spacing: -0.03em;
     color: var(--color-accent-1);
     padding-bottom: 1rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 2rem;
+    background: transparent;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background: linear-gradient(135deg, rgba(26, 35, 50, 0.95), rgba(15, 23, 42, 0.95));
+    border: 2px solid rgba(168, 85, 247, 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(168, 85, 247, 0.1) inset,
+                0 4px 20px rgba(168, 85, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(168, 85, 247, 0.2) inset,
+                0 8px 30px rgba(168, 85, 247, 0.3);
+    border-color: rgba(168, 85, 247, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(168, 85, 247, 0.1);
 }
 
 .datetime {
@@ -326,20 +398,19 @@ img {
     color: var(--color-muted);
 }
 
-/* PDF Schedule Container */
-.schedule-pdf-container {
-    max-width: 900px;
+/* Schedule Image Container */
+.schedule-image-container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-.schedule-pdf-container iframe {
+.schedule-image {
     width: 100%;
-    min-height: 550px;
-    border: none;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background: #fff;
+    display: block;
 }
 
 .pdf-fallback {
@@ -964,6 +1035,26 @@ img {
         font-size: 0.85rem;
     }
 
+    /* Gallery Section Responsive */
+    .gallery-section {
+        padding: 2rem 1rem;
+    }
+
+    .gallery-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-caption {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
     .site-header {
         padding: 0.5rem 1rem;
     }
@@ -999,6 +1090,12 @@ img {
     .hero {
         padding: 2rem 1rem;
         min-height: 60vh;
+    }
+    
+    .hero-caption {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.75rem;
     }
     
     .hero h1 {
@@ -1059,12 +1156,12 @@ img {
         font-size: 1.8rem;
     }
     
-    .schedule-pdf-container {
+    .schedule-image-container {
         padding: 0.5rem;
     }
     
-    .schedule-pdf-container iframe {
-        min-height: 450px;
+    .schedule-image {
+        border-radius: 6px;
     }
     
     .timeline::after {
@@ -1224,6 +1321,12 @@ img {
         padding: 3rem 2rem;
     }
     
+    .hero-caption {
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.85rem;
+    }
+    
     .hero h1 {
         font-size: 32px;
     }
@@ -1235,6 +1338,21 @@ img {
     .hero-button {
         font-size: 18px;
         padding: 0.5rem 0.75rem;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     /* DateTime */

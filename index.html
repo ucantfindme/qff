@@ -43,39 +43,36 @@
             </div>
         </section>
 
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="hero-caption">HARNESS UNCERTAINTY. DISCOVER CERTAINTY.</p>
+                <h1>IISc x Qiskit Fall Fest 2025</h1>
+                <p class="hero-date">October 28 - November 02</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Event Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="gallery/day4.jpg" alt="Day 4 Group Photo" />
+                        <p class="gallery-caption">Day 4 - Full Day Quantum Workshop</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery/day5.JPG" alt="Day 5 Group Photo" />
+                        <p class="gallery-caption">Day 5 - Closing Ceremony</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Day-1 and Day-2 Quick Links -->
         <section class="day-links-section">
             <div class="container">
-                <div style="display: grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: start;">
-                    <!--Hackathon-->
-                    <div class="hackathon-details">
-                        <div class="day-links-header">
-                            <h3>Superpose 24 - The Hackathon</h3>
-                        </div>
-                        <div class="day-links-header">
-                        <p>Dive into 24 hours of quantum creativity, collaboration, and coding!
- Form your dream team, tackle exciting challenges, and bring your ideas to life in a full-day sprint.
- Prizes await the most outstanding teams! Just choose your prompt and start coding! You will have to submit code and a document explaining the solution. </p></div>
-                        <div class="day-header">
-                            <p>All details for submission are given in the form. For doubts please use the Hackathon channels created on Discord.</p>
-                        </div>    
-                        <div class="day-links-buttons">
-                            <b>Team Size - 2 to 4 Members</b>
-                        </div>
-                        <div class="day-links-buttons">
-                            <b>Duration: 1st Nov, 3 PM → 2nd Nov, 3 PM</b>
-                        </div>
-                        <div class="day-links-buttons">
-                            <a href="https://forms.gle/TE6ENYkdzdDNzsez9" target="_blank" class="day-link-btn">
-                               🔗 Submission Form
-                            </a>
-                        </div>
-                        <div class="day-links-buttons">
-                            <a href="https://drive.google.com/drive/folders/1CA1wZV2_Jgpt9q75gx0JhXQLIytEg0Vw?usp=sharing" target="_blank" class="day-link-btn">
-                               🎯 Prompts
-                            </a>
-                        </div>
-                    </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: start;">
                     <!-- Day 1 -->
                     <div>
                         <div class="day-links-header">
@@ -153,37 +150,21 @@
                             </a>
                         </div>
                     </div>
+                     <!--Hackathon-->
+                    <div class="hackathon-details">
+                        <div class="day-links-header">
+                            <h3>Superpose 24 - The Hackathon</h3>
+                        </div>
+                        <div class="day-links-buttons">
+                            <a href="https://drive.google.com/drive/folders/1CA1wZV2_Jgpt9q75gx0JhXQLIytEg0Vw?usp=sharing" target="_blank" class="day-link-btn">
+                               🎯 Prompts
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hero -->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>IISc x Qiskit Fall Fest 2025</h1>
-                <p class="hero-date">October 28 - November 02</p>
-                <p>Registration for attending in person is closed. Register below for attending virtually.</p>
-            </div>
-            <button class="hero-button" onclick="window.open('https://forms.gle/oTsz6LmymCxqVXUDA', '_blank')">Register Now</button>
-        </section>
-
-        <!-- Date -->
-        <section class="datetime" id="details">
-            <span class="countdown-announcement">Begins In</span>
-            <div class="countdown" id="countdown">
-                <span id="days" class="countdown-number">00</span>Days
-                <span id="hours" class="countdown-number">00</span>Hrs
-                <span id="minutes" class="countdown-number">00</span>Mins
-                <span id="seconds" class="countdown-number">00</span>Sec
-            </div>
-            <p class="extra-bold-1">
-                Explore quantum computing at IISc x Qiskit Fall Fest 2025!
-            </p>
-        <!--<p class="extra-bold-1 muted">
-                Talks, Hands-on sessions, and Hackathon for curious minds.
-            </p>
-        -->
-        </section>
 
         <!-- About -->
         <!--<h2 id="about-title">About the Event</h2>-->
@@ -214,17 +195,8 @@
         <!-- Schedule -->
         <section id="schedule" class="schedule">
             <h2>Schedule</h2>
-            <div class="schedule-pdf-container">
-                <iframe 
-                    src="QFFIISc2025 Schedule.pdf" 
-                    type="application/pdf" 
-                    width="100%" 
-                    height="800px"
-                    style="border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
-                </iframe>
-                <div class="pdf-fallback">
-                    <p>Unable to display PDF? <a href="QFFIISc2025 Schedule.pdf" download style="color: var(--color-accent-1); text-decoration: underline;">Download the schedule here</a></p>
-                </div>
+            <div class="schedule-image-container">
+                <img src="gallery/schedule.png" alt="QFF IISc 2025 Schedule" class="schedule-image" />
             </div>
         </section>
 
@@ -452,9 +424,8 @@
         <!-- Random Banner -->
         <section class="banner">
             <div class="banner-content">
-                <h2>Ready to Join?</h2>
-                <p>Your quantum adventure starts here.</p>
-                <button class="banner-button" onclick="window.open('https://forms.gle/oTsz6LmymCxqVXUDA', '_blank')">Register Now</button>
+                <h2>IISc x Qiskit Fallfest will </h2>
+                <h1>Return again in 2026</h1>
             </div>
             <!--<img src="assets/CTA-bottom-section-bg.png" alt="Register Now" />-->
         </section>
